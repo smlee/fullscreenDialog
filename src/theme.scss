@@ -1,0 +1,52 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+$mat-darkblue: (
+  50: #e3f2fd,
+  100: #bbdefb,
+  200: #90caf9,
+  300: #64b5f6,
+  400: #42a5f5,
+  500: #00053b,
+  600: #1e88e5,
+  700: #1976d2,
+  800: #1565c0,
+  900: #002f66,
+  A100: #3f5894,
+  A200: #00053b,
+  A400: #00053b,
+  A700: #2962ff,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: $white-87-opacity,
+    900: $white-87-opacity,
+    A100: $black-87-opacity,
+    A200: white,
+    A400: white,
+    A700: white,
+  )
+);
+
+$realster-home-primary: mat-palette($mat-darkblue, 900);
+$realster-home-accent:  mat-palette($mat-darkblue, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$realster-home-warn:    mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$realster-home-theme: mat-light-theme($realster-home-primary, $realster-home-accent, $realster-home-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($realster-home-theme);
