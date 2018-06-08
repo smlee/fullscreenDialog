@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatDialogModule,
@@ -10,6 +11,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { FullscreenDialogComponent } from './dialog/fullscreen-dialog.component';
+import 'hammerjs';
 
 
 @NgModule({
@@ -23,6 +25,8 @@ import { FullscreenDialogComponent } from './dialog/fullscreen-dialog.component'
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatDialogModule,
     MatIconModule,
     MatButtonModule,

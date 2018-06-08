@@ -2,4 +2,18 @@
 <div style="text-align:center">
   <button mat-button (click)="openDialog()">Open Dialog</button>
 </div>
+<form [formGroup]="formGroup">
+  <h1>Checkbox test</h1>
+  <div class="test__checkbox">
+    <input class="test__checkbox-input"
+        type="checkbox"
+        id="checkbox"
+        formControlName="checkbox"
+        [checked]="formGroup.controls.checkbox.value"
+        (click)="handleCheckbox($event.target.checked);"
+      >
+      <label for="checkbox"></label>
+  </div>
+</form>
+
 

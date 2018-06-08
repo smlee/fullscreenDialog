@@ -1,0 +1,27 @@
+.test__checkbox {
+  position: relative;
+}
+input[type=checkbox]:checked + label{
+  cursor: pointer;
+  background: url('/assets/check.png');
+  background-position: 0px 4px;
+  background-size: 71% 72%;
+  background-repeat: no-repeat;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+input {
+  visibility: hidden;
+}
+
+label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  height: 13px;
+  width: 13px;
+  background-color: #FFF;
+  border: 2px solid #777;
+}
