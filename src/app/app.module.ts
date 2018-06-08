@@ -6,6 +6,7 @@ import {
   MatIconModule,
   MatButtonModule
 } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { FullscreenDialogComponent } from './dialog/fullscreen-dialog.component';
@@ -24,12 +25,14 @@ import { FullscreenDialogComponent } from './dialog/fullscreen-dialog.component'
     BrowserAnimationsModule,
     MatDialogModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    FlexLayoutModule
   ],
   exports: [
     MatDialogModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
